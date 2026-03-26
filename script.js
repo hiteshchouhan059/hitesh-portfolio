@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navRight = document.querySelector('.nav-right');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (menuToggle && navRight) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navRight.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navRight.classList.remove('active');
+            });
+        });
+    }
+
     // 1. Custom Cursor
     const cursor = document.getElementById('custom-cursor');
     const interactiveElements = document.querySelectorAll('a, button, input, textarea, .skill-tag, .cert-card');
