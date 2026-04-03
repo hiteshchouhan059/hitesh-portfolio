@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.getElementById('menu-toggle-btn');
     const navRight = document.querySelector('.nav-right');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -83,15 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. Real AJAX Form Submission via FormSubmit
-    const contactForm = document.querySelector('.contact-form');
-    if(contactForm) {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = contactForm.querySelector('.submit-btn');
+            const btn = document.getElementById('submit-btn');
             const originalText = btn.innerHTML;
             btn.innerHTML = 'SENDING...';
-            btn.style.backgroundColor = 'var(--fg-color)';
-            btn.style.color = 'var(--bg-color)';
+            btn.style.backgroundColor = '#000';
+            btn.style.color = '#FFD93D'; /* neo-secondary */
 
             const formData = {
                 name: contactForm.querySelector('input[name="name"]').value,
@@ -102,28 +102,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetch("https://formsubmit.co/ajax/hiteshchouhan2500@gmail.com", {
                 method: "POST",
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: JSON.stringify(formData)
             })
             .then(response => response.json())
-            .then(data => {
-                btn.innerHTML = 'SENT! &check;';
+            .then(() => {
+                btn.innerHTML = 'SENT! ✓';
+                btn.style.backgroundColor = '#FFD93D';
+                btn.style.color = '#000';
                 setTimeout(() => {
                     contactForm.reset();
                     btn.innerHTML = originalText;
-                    btn.style.backgroundColor = 'var(--bg-color)';
-                    btn.style.color = 'var(--fg-color)';
+                    btn.style.backgroundColor = '#FF6B6B'; /* neo-accent */
+                    btn.style.color = '#fff';
                 }, 3000);
             })
-            .catch(error => {
-                btn.innerHTML = 'ERROR!';
+            .catch(() => {
+                btn.innerHTML = 'ERROR! TRY AGAIN';
+                btn.style.backgroundColor = '#FF6B6B';
+                btn.style.color = '#fff';
                 setTimeout(() => {
                     btn.innerHTML = originalText;
-                    btn.style.backgroundColor = 'var(--bg-color)';
-                    btn.style.color = 'var(--fg-color)';
+                    btn.style.backgroundColor = '#FF6B6B';
+                    btn.style.color = '#fff';
                 }, 3000);
             });
         });
@@ -179,6 +183,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Designed an intuitive Android UI/UX specifically catering to student housing searches.",
                 "Integrated Firebase for real-time reliable data synchronization of hostel availability.",
                 "Developed using Java and Android Studio for native optimal performance."
+            ],
+            link: ""
+        },
+        {
+            title: "FALCON THEATER",
+            desc: "A modern website built for a private theater business to establish a strong online presence and attract more customers. The platform showcases services, ambiance, and offerings with a clean, responsive design.",
+            points: [
+                "Designed a clean and engaging UI to showcase private theater experiences.",
+                "Built a fully responsive website optimized for all screen sizes.",
+                "Focused on performance and fast loading using a static deployment.",
+                "Improved business visibility and digital credibility."
+            ],
+            link: "https://falcontheaters.vercel.app/"
+        },
+        {
+            title: "GAMING HUB",
+            desc: "A visually engaging website designed for a gaming room setup to highlight gaming experiences and attract local users. The platform focuses on modern UI and immersive presentation.",
+            points: [
+                "Created a modern UI with a gaming-focused visual experience.",
+                "Showcased gaming setups and services in an engaging layout.",
+                "Built a responsive design for seamless use across devices.",
+                "Designed to improve customer engagement and interest."
             ],
             link: ""
         }

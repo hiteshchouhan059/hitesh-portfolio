@@ -3,77 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitesh P Chouhan | Cloud & DevOps Engineer</title>
-    <meta property="og:title" content="Hitesh P Chouhan | Cloud & DevOps Engineer" />
-<meta property="og:description" content="Cloud & DevOps Engineer · MCA Student · Building systems that don't break." />
-<meta property="og:url" content="https://hitesh-portfolio-nu.vercel.app/" />
-<meta property="og:type" content="website" />
-    <!-- Space Grotesk Font from Google Fonts -->
+    <title>Hitesh P Chouhan | Cloud &amp; DevOps Engineer</title>
+    <meta name="description" content="Cloud &amp; DevOps Engineer · MCA Student · Building systems that don't break. Based in Bengaluru, India." />
+    <meta property="og:title" content="Hitesh P Chouhan | Cloud &amp; DevOps Engineer" />
+    <meta property="og:description" content="Cloud &amp; DevOps Engineer · MCA Student · Building systems that don't break." />
+    <meta property="og:url" content="https://hitesh-portfolio-nu.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <!-- Space Grotesk — Neo-brutalism signature font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=block" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+
     <!-- Custom Cursor -->
     <div id="custom-cursor"></div>
 
-    <!-- 1. FIXED NAVBAR -->
-    <nav class="navbar">
+    <!-- ============================================================
+         1. FIXED NAVBAR
+         ============================================================ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-left">
-            <a href="#" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <a href="#" class="logo" aria-label="Hitesh Chouhan home">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h5a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h5V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2m-3 9H7v4h2v-4m8 0h-2v4h2v-4M8 17h8v-2H8v2Z"/>
                 </svg>
+                HPC
             </a>
-            <button class="menu-toggle" aria-label="Toggle menu">
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <div class="nav-right">
-            <a href="#about" class="nav-link">ABOUT</a>
-            <a href="#work" class="nav-link">WORK</a>
-            <a href="#skills" class="nav-link">SKILLS</a>
-            <a href="#experience" class="nav-link">EXPERIENCE</a>
-            <a href="#contact" class="nav-link">CONTACT</a>
+        <div class="nav-right" id="nav-menu" role="list">
+            <a href="#about"        class="nav-link" role="listitem">ABOUT</a>
+            <a href="#work"         class="nav-link" role="listitem">WORK</a>
+            <a href="#skills"       class="nav-link" role="listitem">SKILLS</a>
+            <a href="#experience"   class="nav-link" role="listitem">EXP</a>
+            <a href="#contact"      class="nav-link" role="listitem">CONTACT</a>
         </div>
     </nav>
 
-    <!-- 2. HERO -->
+    <!-- ============================================================
+         2. HERO
+         ============================================================ -->
     <header class="hero" id="about">
+        <!-- Decorative floaters (aria-hidden so screen readers skip) -->
+        <div class="hero-floater-1" aria-hidden="true"></div>
+        <div class="hero-floater-2" aria-hidden="true"></div>
+        <div class="hero-floater-3" aria-hidden="true"></div>
+
         <div class="hero-content">
             <div class="hero-text-content">
                 <h1 class="hero-name">HITESH</h1>
-                <h1 class="hero-name outline">CHOUHAN</h1>
-                <p class="hero-subtitle">Cloud & DevOps Engineer · MCA Student · Bengaluru, India</p>
+                <h1 class="hero-name outline">
+                    <span class="hero-name-band">CHOUHAN</span>
+                </h1>
+                <p class="hero-subtitle">Cloud &amp; DevOps Engineer&nbsp;·&nbsp;MCA Student&nbsp;·&nbsp;Bengaluru, India</p>
             </div>
+
             <div class="hero-image-container">
-                <img src="profile.png" alt="Hitesh P Chouhan" class="hero-img">
+                <img src="profile.png" alt="Hitesh P Chouhan — Cloud &amp; DevOps Engineer" class="hero-img">
+                <div class="hero-badge" aria-label="Available for opportunities">AVAILABLE&nbsp;✦</div>
             </div>
         </div>
+
         <div class="hero-bottom-bar">
             <div class="tl">Building systems that don't break.</div>
-            <div class="tr indicator">AVAILABLE FOR OPPORTUNITIES <span class="blink">●</span></div>
+            <div class="tr indicator">OPEN TO OPPORTUNITIES <span class="blink" aria-hidden="true">●</span></div>
         </div>
     </header>
 
-    <!-- 3. SCROLLING TICKER -->
-    <div class="ticker-wrap">
+    <!-- ============================================================
+         3. SCROLLING TICKER
+         ============================================================ -->
+    <div class="ticker-wrap" aria-hidden="true">
         <div class="ticker-content">
-            <span>AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO · AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO ·&nbsp;</span>
-            <span>AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO · AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO ·&nbsp;</span>
+            <span>AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO · LINUX · GITHUB ACTIONS ·&nbsp;</span>
+            <span>AWS · KUBERNETES · DOCKER · CI/CD · FLASK · PYTHON · CLOUD INFRASTRUCTURE · VELERO · LINUX · GITHUB ACTIONS ·&nbsp;</span>
         </div>
     </div>
 
-    <!-- 4. PROJECTS / WORK -->
+    <!-- ============================================================
+         4. PROJECTS / WORK
+         ============================================================ -->
     <section id="work" class="reveal-on-scroll">
         <div class="container">
             <h2 class="section-title">02 &mdash; SELECTED WORK</h2>
             <div class="projects-grid">
-                
+
                 <div class="brutalist-card project-card">
                     <div class="card-content">
                         <h3>Kubernetes Disaster Recovery using Velero</h3>
@@ -84,7 +105,7 @@
                             <span class="tag">Docker</span>
                         </div>
                     </div>
-                    <button class="brutalist-btn project-btn">VIEW &rarr;</button>
+                    <button class="brutalist-btn project-btn" id="project-btn-0" aria-label="View Kubernetes Disaster Recovery project">VIEW &rarr;</button>
                 </div>
 
                 <div class="brutalist-card project-card">
@@ -97,7 +118,7 @@
                             <span class="tag">VPC</span>
                         </div>
                     </div>
-                    <button class="brutalist-btn project-btn">VIEW &rarr;</button>
+                    <button class="brutalist-btn project-btn" id="project-btn-1" aria-label="View AWS 2-Tier Architecture project">VIEW &rarr;</button>
                 </div>
 
                 <div class="brutalist-card project-card">
@@ -110,7 +131,7 @@
                             <span class="tag">HTML/CSS/JS</span>
                         </div>
                     </div>
-                    <button class="brutalist-btn project-btn">VIEW &rarr;</button>
+                    <button class="brutalist-btn project-btn" id="project-btn-2" aria-label="View CampusMart project">VIEW &rarr;</button>
                 </div>
 
                 <div class="brutalist-card project-card">
@@ -123,7 +144,7 @@
                             <span class="tag">AI Tools</span>
                         </div>
                     </div>
-                    <button class="brutalist-btn project-btn">VIEW &rarr;</button>
+                    <button class="brutalist-btn project-btn" id="project-btn-3" aria-label="View DocuSense AI project">VIEW &rarr;</button>
                 </div>
 
                 <div class="brutalist-card project-card">
@@ -136,20 +157,49 @@
                             <span class="tag">Firebase</span>
                         </div>
                     </div>
-                    <button class="brutalist-btn project-btn">VIEW &rarr;</button>
+                    <button class="brutalist-btn project-btn" id="project-btn-4" aria-label="View HostelMate project">VIEW &rarr;</button>
+                </div>
+
+                <div class="brutalist-card project-card">
+                    <div class="card-content">
+                        <h3>Falcon Theater</h3>
+                        <p>Modern website for a private theater business to establish a strong online presence and attract more customers.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                    </div>
+                    <button class="brutalist-btn project-btn" id="project-btn-5" aria-label="View Falcon Theater project">VIEW &rarr;</button>
+                </div>
+
+                <div class="brutalist-card project-card">
+                    <div class="card-content">
+                        <h3>Gaming Hub</h3>
+                        <p>Visually engaging website for a gaming room setup to highlight experiences and attract local users with a modern UI.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <button class="brutalist-btn project-btn" id="project-btn-6" aria-label="View Gaming Hub project">VIEW &rarr;</button>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- 5. SKILLS & TOOLS -->
+    <!-- ============================================================
+         5. SKILLS & TOOLS
+         ============================================================ -->
     <section id="skills" class="reveal-on-scroll">
         <div class="container">
             <h2 class="section-title">03 &mdash; ARSENAL</h2>
             <div class="skills-layout">
                 <div class="skill-group">
-                    <h4 class="group-title">Cloud & DevOps</h4>
+                    <h4 class="group-title">Cloud &amp; DevOps</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">Azure</span>
@@ -160,7 +210,7 @@
                     </div>
                 </div>
                 <div class="skill-group">
-                    <h4 class="group-title">Programming & Dev</h4>
+                    <h4 class="group-title">Programming &amp; Dev</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Flask</span>
@@ -171,10 +221,10 @@
                     </div>
                 </div>
                 <div class="skill-group">
-                    <h4 class="group-title">AI & Data</h4>
+                    <h4 class="group-title">AI &amp; Data</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Machine Learning Basics</span>
+                        <span class="skill-tag">Machine Learning</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -191,15 +241,18 @@
         </div>
     </section>
 
-    <!-- 6. EXPERIENCE -->
+    <!-- ============================================================
+         6. EXPERIENCE
+         ============================================================ -->
     <section id="experience" class="reveal-on-scroll">
         <div class="container">
             <h2 class="section-title">04 &mdash; EXPERIENCE</h2>
             <div class="timeline">
+
                 <div class="timeline-entry">
                     <div class="entry-header">
                         <h3>Caze Labs Pvt. Ltd.</h3>
-                        <span class="badge">Present</span>
+                        <span class="badge present">PRESENT</span>
                     </div>
                     <p class="role">Cloud Intern</p>
                     <ul>
@@ -231,11 +284,14 @@
                         <li>Enhanced user experience and platform speed across multiple browsers.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 7. CERTIFICATIONS -->
+    <!-- ============================================================
+         7. CERTIFICATIONS
+         ============================================================ -->
     <section id="certifications" class="reveal-on-scroll">
         <div class="container">
             <h2 class="section-title">05 &mdash; CREDENTIALS</h2>
@@ -250,15 +306,21 @@
         </div>
     </section>
 
-    <!-- 9. RESUME DOWNLOAD -->
+    <!-- ============================================================
+         9. RESUME DOWNLOAD
+         ============================================================ -->
     <section id="resume" class="dark-band reveal-on-scroll">
         <div class="container text-center">
-            <h2 class="huge-heading">WANT THE FULL PICTURE?</h2>
-            <a href="resume.pdf" class="brutalist-btn invert-btn" download="Hitesh_Chouhan_Resume.pdf" target="_blank">DOWNLOAD RESUME &darr;</a>
+            <h2 class="huge-heading">WANT THE FULL <em>PICTURE?</em></h2>
+            <a href="resume.pdf" class="brutalist-btn invert-btn" download="Hitesh_Chouhan_Resume.pdf" target="_blank" rel="noopener">
+                DOWNLOAD RESUME &darr;
+            </a>
         </div>
     </section>
 
-    <!-- 10. CONTACT -->
+    <!-- ============================================================
+         10. CONTACT
+         ============================================================ -->
     <section id="contact" class="reveal-on-scroll">
         <div class="container">
             <h2 class="section-title">07 &mdash; LET'S TALK</h2>
@@ -266,49 +328,53 @@
                 <div class="contact-info">
                     <h2 class="massive-text">GOT A PROJECT?</h2>
                     <a href="mailto:hiteshchouhan2500@gmail.com" class="big-email">hiteshchouhan2500@gmail.com</a>
-                    
+
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hiteshchouhan059/" class="brutalist-card social-card" target="_blank">LinkedIn &nearr;</a>
-                        <a href="https://github.com/hiteshchouhan059" class="brutalist-card social-card" target="_blank">GitHub &nearr;</a>
+                        <a href="https://www.linkedin.com/in/hiteshchouhan059/" class="brutalist-card social-card" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn &nearr;</a>
+                        <a href="https://github.com/hiteshchouhan059" class="brutalist-card social-card" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub &nearr;</a>
                     </div>
                 </div>
-                
-                <form action="https://formsubmit.co/hiteshchouhan2500@gmail.com" method="POST" class="contact-form">
+
+                <form action="https://formsubmit.co/hiteshchouhan2500@gmail.com" method="POST" class="contact-form" id="contact-form" novalidate>
                     <input type="hidden" name="_captcha" value="false">
-                    
+
                     <div class="form-group">
-                        <label class="label">Name</label>
-                        <input type="text" name="name" class="brutalist-input" required>
+                        <label class="label" for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" class="brutalist-input" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <label class="label">Email</label>
-                        <input type="email" name="email" class="brutalist-input" required>
+                        <label class="label" for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" class="brutalist-input" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label class="label">Message</label>
-                        <textarea name="message" class="brutalist-input" rows="5" required></textarea>
+                        <label class="label" for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" class="brutalist-input" rows="5" placeholder="What's on your mind?" required></textarea>
                     </div>
-                    <button type="submit" class="brutalist-btn submit-btn">SEND IT &rarr;</button>
+                    <button type="submit" class="brutalist-btn submit-btn" id="submit-btn">SEND IT &rarr;</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- MODAL -->
-    <div class="modal-overlay" id="project-modal">
+    <!-- ============================================================
+         MODAL
+         ============================================================ -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="brutalist-card modal-content">
-            <button class="brutalist-btn close-btn" id="modal-close">X</button>
+            <button class="brutalist-btn close-btn" id="modal-close" aria-label="Close modal">✕</button>
             <h3 id="modal-title" class="modal-title">Project Title</h3>
             <p id="modal-desc" class="modal-desc">Project description goes here.</p>
             <ul id="modal-points" class="modal-points" style="display: none;"></ul>
-            <a href="#" id="modal-link" class="brutalist-btn" style="display: none;" target="_blank">VIEW PROJECT &nearr;</a>
+            <a href="#" id="modal-link" class="brutalist-btn" style="display: none;" target="_blank" rel="noopener">VIEW PROJECT &nearr;</a>
         </div>
     </div>
 
-    <!-- 11. FOOTER -->
-    <footer class="footer">
+    <!-- ============================================================
+         11. FOOTER
+         ============================================================ -->
+    <footer class="footer" role="contentinfo">
         <div class="footer-left">HITESH P CHOUHAN &copy; 2026</div>
-        <div class="footer-right">DESIGNED WITH STRUCTURE. BUILT WITH INTENT. &uarr;</div>
+        <div class="footer-right">BUILT WITH INTENT. DESIGNED WITH STRUCTURE. &#9650;</div>
     </footer>
 
     <script src="script.js"></script>
